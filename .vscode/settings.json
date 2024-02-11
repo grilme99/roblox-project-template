@@ -7,6 +7,9 @@
     "luau-lsp.require.directoryAliases": {
         "@Packages": "Packages/",
         "@Client": "src/Client/",
+        "@Controllers": "src/Client/Controllers/",
+        "@Components": "src/Client/UI/Components/",
+        "@Hooks": "src/Client/UI/Hooks/",
         "@Common": "src/Common/",
         "@Server": "src/Server/"
     }

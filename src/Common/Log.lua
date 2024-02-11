@@ -4,17 +4,21 @@ local Log = {}
 
 local function createLogFunction(levelName: string, logFn: (...string) -> (), printInDev: boolean)
 	return function(...: any)
-		if __DEV__ and not printInDev then
+		if printInDev and not __DEV__ then
 			return
 		end
 
-		local moduleName = debug.info(2, "s")
-		logFn(`[{levelName}] {moduleName}:`, ...)
+		-- Get the full path of the module (Path.To.Module), and then take the
+		-- final segment as the name (`Module`).
+		local modulePath = debug.info(2, "s")
+		local moduleName = modulePath:match("[^.]+$")
+
+		logFn(`[{moduleName}] {levelName}:`, ...)
 	end
 end
 
-Log.debug = createLogFunction("debug", print, false)
-Log.info = createLogFunction("info", print, true)
-Log.warn = createLogFunction("warn", warn, true)
+Log.debug = createLogFunction("DEBUG", print, false)
+Log.info = createLogFunction("INFO", print, true)
+Log.warn = createLogFunction("WARN", warn, true)
 
 return Log

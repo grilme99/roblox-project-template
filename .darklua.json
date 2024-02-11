@@ -16,7 +16,8 @@
                     "@Components": "src/Client/UI/Components/",
                     "@Hooks": "src/Client/UI/Hooks/",
                     "@Common": "src/Common/",
-                    "@Server": "src/Server/"
+                    "@Server": "src/Server/",
+                    "@Services": "src/Server/Services/"
                 }
             },
             "target": {

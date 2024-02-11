@@ -1,0 +1,10 @@
+sourcemap.json
+Packages/
+**/*.rbx[lm]*
+.DS_Store
+roblox.yml
+roblox.toml
+**/luacov.*
+
+**/sourcemap.json
+dist/

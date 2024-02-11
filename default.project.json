@@ -1,0 +1,23 @@
+{
+    "name": "RobloxProjectTemplate",
+    "emitLegacyScripts": false,
+    "tree": {
+        "$className": "DataModel",
+        "ReplicatedStorage": {
+            "Packages": {
+                "$path": "Packages"
+            },
+            "Client": {
+                "$path": "src/Client"
+            },
+            "Common": {
+                "$path": "src/Common"
+            }
+        },
+        "ServerScriptService": {
+            "Server": {
+                "$path": "src/Server"
+            }
+        }
+    }
+}

@@ -4,7 +4,7 @@ Packages/
 .DS_Store
 roblox.yml
 roblox.toml
-**/luacov.*
+globalTypes.d.lua
 
 **/sourcemap.json
 dist/
